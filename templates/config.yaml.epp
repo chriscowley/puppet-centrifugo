@@ -1,0 +1,5 @@
+<%- | Hash[String, String] $config_hash | -%>
+<% include stdlib -%>
+<% $config_hash.keys.sort.each |$key| { -%>
+<%= $key -%>: <%= $config_hash[$key] %>
+<% } -%>
