@@ -9,7 +9,7 @@
 class centrifugo::config {
   file { '/etc/centrifugo/config.json':
     ensure  => present,
-    content => to_json($::centrifugo::config_hash),
+    content => to_json_pretty($::centrifugo::config_hash),
     owner   => 'centrifugo',
     group   => 'centrifugo',
     mode    => '0644',
